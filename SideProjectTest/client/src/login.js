@@ -100,7 +100,7 @@ class Login extends React.Component {
     return(
  
 <Router>
-    <div>
+    <div className="formContainer">
     
       {/* inputs for payload to be sent to DB */}
       <div className="app">

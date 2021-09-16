@@ -654,7 +654,7 @@ onButtonCLickHandler = () => {
       topicID: this.state.topicID,
       sttrID: this.state.sttrID, 
       phaseType: this.state.phaseType,
-      stateOfProject: this.state.project, 
+      stateOfProject: this.state.stateOfProject, 
       token: token
   
     };
@@ -717,7 +717,7 @@ onButtonCLickHandler = () => {
       payload.phaseType = this.state.phaseTypeTip;
     } 
     if (payload.stateOfProject === '') { 
-      payload.phaseType = this.state.phaseTypeTip;
+      payload.stateOfProject = this.state.stateOfProjectTip;
     }
 
 //estabishing connection to Node.js and MongoDB//
@@ -823,6 +823,7 @@ onButtonCLickHandler = () => {
   
  
       {/* inputs for payload to be sent to DB */}
+      <div className="updateContainer">
       <div className="app">
 
       <img className="photo" src={CompanyLogo}/>
@@ -1079,7 +1080,7 @@ onButtonCLickHandler = () => {
         
       
 </div>
-   
+      </div>
       </div>
     
     

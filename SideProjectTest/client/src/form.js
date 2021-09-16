@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router} from 'react-router-dom';
 import swal from 'sweetalert';
 import CompanyLogo from './logo.png'
-import formBackground from './img/formBackground.jpeg'
 
 import './App.css';
 
@@ -217,13 +216,11 @@ onButtonCLickHandler = () => {
 
     console.log('State: ', this.state);
 
-    
-
     //JSX
     return(
  
 <Router>
-    <div style={{ backgroundImage: `url(${formBackground})`}}>
+    <div className="formContainer">
   
  
       {/* inputs for payload to be sent to DB */}

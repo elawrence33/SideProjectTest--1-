@@ -1,5 +1,5 @@
 .app {
-  background-color: #737373;
+  /* background-color: #737373; */
   padding-top: 50px;
   padding-right: 30px;
   padding-bottom: 50px;
@@ -54,7 +54,6 @@ select {
   border-width: 3px;
 outline: 3px;
 margin-left: 28%;
-margin-right: 35%;
 box-shadow: 10px 10px 8px #2525259d
   }
 
@@ -190,14 +189,14 @@ background-color: red;
 }
 
 .searchbg{
-  background-color: #737373;
+  background-image: url(./img/searchBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-top: 50px;
   padding-right: 30px;
   padding-bottom: 50px;
   padding-left: 80px;
   width: 90%;
-  background-size: cover;
- 
 }
 .searchcomp{
   color: #fff;
@@ -232,4 +231,25 @@ ul{
 
 .navBar-link {
   background-color: black;
+}
+/* Used to format the form background */
+.formContainer { 
+  background-image: url(./img/formBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.searchContainer { 
+  background-image: url(./img/formBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.updateContainer { 
+  background-image: url(./img/formBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.deleteContainer { 
+  background-image: url(./img/formBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

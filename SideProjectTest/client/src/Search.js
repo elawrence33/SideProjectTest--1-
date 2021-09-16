@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // This was an important Select component that looked nicer but was unable to pull data from it: 
 // import Select from "react-dropdown-select";
@@ -483,8 +484,9 @@ class Search extends React.Component {
     return(
 
 
-      <div className="searchbg">
-        <img className="photo" src= {CompanyLogo}></img>
+      <div className="searchContainer">
+        <div className="app">
+        <img className="photo" src={CompanyLogo}></img>
         <h1 className="search1" >Search The Catalyst Campus Database</h1>
         <br></br>
         <br></br>
@@ -517,6 +519,11 @@ class Search extends React.Component {
         </ul>
       </div>
 
+      <br /> 
+      <br />
+      <br /> 
+      <br />
+      </div>
       </div>
 
       

@@ -142,7 +142,7 @@ onButtonCLickHandler = () => {
     return(
  
 
-    <div>
+    <div className="deleteContainer">
   
  
       {/* inputs for payload to be sent to DB */}
