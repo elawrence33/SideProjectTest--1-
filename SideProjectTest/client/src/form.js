@@ -1,9 +1,13 @@
+// Author: Eli Lawrence 
+// Date: 9/16/2021
+
 import React from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router} from 'react-router-dom';
 import swal from 'sweetalert';
 import CompanyLogo from './logo.png'
+import formBackground from './img/formBackground.jpeg'
 
 import './App.css';
 
@@ -72,7 +76,8 @@ const options1 = [
     value: "Awarded",
   }
 ];
-
+// The web token for authorization: used for global scope
+var token;
 
 class Form extends React.Component {
 
@@ -109,6 +114,7 @@ onButtonCLickHandler = () => {
 
   componentDidMount = () => {
     this.getblogpost();
+    token = localStorage.getItem("token");
   };
 //used for creating payload to send to MongoDB//
   getblogpost = () => {
@@ -155,7 +161,8 @@ onButtonCLickHandler = () => {
       topicID: this.state.topicID,
       sttrID: this.state.sttrID, 
       phaseType: this.state.phaseType,
-      stateOfProject: this.state.project
+      stateOfProject: this.state.project, 
+      token: token
   
     };
 
@@ -216,7 +223,7 @@ onButtonCLickHandler = () => {
     return(
  
 <Router>
-    <div>
+    <div style={{ backgroundImage: `url(${formBackground})`}}>
   
  
       {/* inputs for payload to be sent to DB */}

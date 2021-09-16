@@ -120,6 +120,8 @@ class Search extends React.Component {
 
   componentDidMount = () => {  
     this.getBlogPost();
+    const token = localStorage.getItem("token");
+    console.log("This is our token from local storage: " + token);
   }
   handleChange1 = ({ target }) => { 
     const { name, value } = target;

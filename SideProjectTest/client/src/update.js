@@ -73,6 +73,7 @@ const options1 = [
   }
 ];
 
+var token = localStorage.getItem("token");
 
 class Update extends React.Component {
 
@@ -136,6 +137,7 @@ onButtonCLickHandler = () => {
 
   componentDidMount = () => {
     this.getblogpost();
+    
   };
  
 //used for creating payload to send to MongoDB//
@@ -652,7 +654,8 @@ onButtonCLickHandler = () => {
       topicID: this.state.topicID,
       sttrID: this.state.sttrID, 
       phaseType: this.state.phaseType,
-      stateOfProject: this.state.project
+      stateOfProject: this.state.project, 
+      token: token
   
     };
     

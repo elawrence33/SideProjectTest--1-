@@ -74,6 +74,20 @@ button {
   width: 15%;
 
 }
+/* Styles for the logout Button that is displayed on the navigation bar */
+.logoutButton { 
+  background-color: #00A7CB;
+  color: #fff;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: none;
+  margin-left: 30%;
+  box-shadow: 5px 5px 4px rgb(239, 96, 39);
+  width: auto;
+}
 
 .blog-post__display {
   border: 1px solid lightgrey;

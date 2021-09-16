@@ -1,3 +1,6 @@
+// Author: Eli Lawrence
+// Date: 9/16/2021
+
 import React from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,6 +9,7 @@ import CompanyLogo from './logo.png'
 
 import './App.css';
 
+var token = localStorage.getItem("token");
 
 class Delete extends React.Component {
 
@@ -52,7 +56,11 @@ onButtonCLickHandler = () => {
     
 //payload sent to Node.js to be posted in MongoDB//
     const payload = {
-      smallBusiness: this.state.smallBusiness
+      smallBusiness: this.state.smallBusiness,
+      // The key 'token' will hold the value: 'token', which is a global variable that holds
+      // a jwt (JSON Web Token) issued after the user logs in. The program stores it in 
+      // React's lobal storage (client side) and is then accessed above the class declaration. 
+      token: token
     };
 
 //estabishing connection to Node.js and MongoDB//
@@ -156,6 +164,17 @@ onButtonCLickHandler = () => {
         </form>
       
       </div>
+      {/* Creating extra space as the to snap the footer to the bootom of the page. The window is at a fixed size: */}
+      <br /> 
+      <br /> 
+      <br /> 
+      <br />
+      <br /> 
+      <br /> 
+      <br /> 
+
+
+
    
     </div>
     
