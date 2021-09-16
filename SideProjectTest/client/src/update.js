@@ -740,31 +740,6 @@ onButtonCLickHandler = () => {
         });
         console.log('Internal server error');
       });;
-    // axios.put('/update', {
-    //     id: payload.id,
-    //     newBusiness: payload.smallBusiness,
-    //     newAddress: payload.address,
-    //     newWebsite: payload.website, 
-    //     newCompanyTech: payload.companyTech,
-    //     newPoc: payload.poc,
-    //     newEmailInfo: payload.emailinfo,
-    //     newPhoneInfo: payload.phoneinfo,
-    //     newTitleSttr: payload.titleSTTR,
-    //     newDescripSttr: payload.descripSTTR,
-    //     newPrincInv: payload.princInv,
-    //     newBusinessSplit: payload.businessSplit,
-    //     newCctiSplit: payload.cctiSplit, 
-    //     newCctiProvide: payload.cctiprovide,
-    //     newMou: payload.mou,
-    //     newNda: payload.nda,
-    //     newIpAdd: payload.ipADD, 
-    //     newCycleSubmit: payload.cycleSubmit, 
-    //     newTopicID: payload.topicID,
-    //     newSttrId: payload.sttrID,
-    //     newPhaseType: payload.phaseType,
-    //     newStateOfProject: payload.stateOfProject
-        
-    // });
     
   };
 
