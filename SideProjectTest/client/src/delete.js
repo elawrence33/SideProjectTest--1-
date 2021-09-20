@@ -154,12 +154,14 @@ onButtonCLickHandler = () => {
         <br></br>
         <form onSubmit={this.submit}>
          {/* input text box's for needed payload */}
-          <div className="form-input"> 
-            <h3>Select Your Business Name:</h3>
+          <div className="delete-form-input"> 
+            <h3 className="search2">Select Your Business Name:</h3>
             <select value={this.state.smallBusiness} name="smallBusiness" onChange={this.handleChange}>
                 {this.displayTitles(this.state)}
             </select>
           </div>
+          <br /> 
+          <br /> 
           <button onClick={this.submit}>Delete</button>
         </form>
       

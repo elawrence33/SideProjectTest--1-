@@ -80,11 +80,6 @@ var token;
 
 class Form extends React.Component {
 
-  //message that info has been sent, need to reconfigure incase the entry is a duplicate.
-onButtonCLickHandler = () => {
-  
-
-}
 //imported from Schema and saved as strings so you can view in Web App console to see the inputs being stored; also used for Payload//
   state = {
     smallBusiness: '',

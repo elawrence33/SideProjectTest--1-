@@ -27,10 +27,22 @@
   font-weight: 700;
   border:rgb(95, 95, 95);
   border-width: 3px;
-outline: 3px;
-margin-left: 28%;
-margin-right: 35%;
-box-shadow: 10px 10px 8px #2525259d;
+  outline: 3px;
+  margin-left: 28%;
+  margin-right: 35%;
+  box-shadow: 10px 10px 8px #2525259d;
+}
+/* Used only for the delete page: */ 
+.delete-form-input { 
+  width: 50%;
+  margin: 10px 0px;
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border:rgb(95, 95, 95);
+  border-width: 3px;
+  outline: 3px;
+  margin-left: 28%;
+  margin-right: 35%;
 }
 
 .form-input input, .form-input textarea {
@@ -56,6 +68,16 @@ outline: 3px;
 margin-left: 28%;
 box-shadow: 10px 10px 8px #2525259d
   }
+.selectDelete { 
+  width: 50%;
+  margin: 10px 0px;
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border:rgb(95, 95, 95);
+  border-width: 3px;
+  outline: 3px;
+  margin-left: 28%;
+}
 
 
 
