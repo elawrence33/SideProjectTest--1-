@@ -93,7 +93,7 @@ onButtonCLickHandler = () => {
     return(
  
 <Router>
-    <div>
+    <div className="formContainer">
   
  
       {/* inputs for payload to be sent to DB */}
@@ -126,7 +126,7 @@ onButtonCLickHandler = () => {
          
           <div className="form-input">
             <input 
-              type="text"
+              type="password"
               name="password"
               placeholder="Enter a password"
               value={this.state.password}
@@ -137,7 +137,13 @@ onButtonCLickHandler = () => {
           <button onClick={this.submit} >Submit</button>
         </form>
         
-      
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 </div>
    
       </div>

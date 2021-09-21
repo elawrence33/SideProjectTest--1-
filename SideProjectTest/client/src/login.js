@@ -22,7 +22,6 @@ class Login extends React.Component {
 
   componentDidMount = () => {
     const token = localStorage.getItem("token");
-    console.log("This is our token from local storage: " + token);
   };
 //used for creating payload to send to MongoDB//
   getblogpost = () => {
@@ -61,7 +60,6 @@ class Login extends React.Component {
       data: payload
     })
       .then(response => {
-        console.log('Login Successful!');
         this.resetUserInputs();
         localStorage.setItem("token", response.data.token);
         swal('Login Successful!', {
@@ -95,7 +93,6 @@ class Login extends React.Component {
       return <Redirect to={this.state.redirect} /> 
     }
 
-    console.log('State: ', this.state);
     //JSX
     return(
  

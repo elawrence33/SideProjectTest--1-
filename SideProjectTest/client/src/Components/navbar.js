@@ -62,7 +62,7 @@ render() {
         {/* This is specifically used to enable a the capability of creating an account.  */}
         {/* <li class="nav-item">
           <a class="nav-link" href="/createAccount">Create Account</a>
-        </li> */}
+        </li>  */}
         <li className="nav-item"> 
           <button className="logoutButton" onClick={this.clearCache}>Logout</button>
         </li>

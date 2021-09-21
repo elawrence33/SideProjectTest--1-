@@ -38,9 +38,8 @@ render() {
                 <Route exact path='/Search' component={Search}></Route>
                 <Route exact path='/Update' component={Update}></Route>
                 <Route exact path='/Delete' component={Delete}></Route>
-                <Footer /> 
-
                 {/* <Route exact path='/createAccount' component={Register}></Route> */}
+                <Footer />                 
               </div>
             </Switch>
     </Router>
