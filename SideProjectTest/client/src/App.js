@@ -10,6 +10,7 @@ import Form from './form';
 import Search from './Search';
 import Update from './update';
 import Delete from './delete';
+import Pass from './changePass';
 import Register from './createAccount';
 import Login from './login';
 import Footer from './Components/Footer';
@@ -37,7 +38,9 @@ render() {
                 <Route exact path='/Form' component={Form}></Route>
                 <Route exact path='/Search' component={Search}></Route>
                 <Route exact path='/Update' component={Update}></Route>
+                <Route exact path='/changePass' component={Pass}></Route>
                 <Route exact path='/Delete' component={Delete}></Route>
+                
                 {/* <Route exact path='/createAccount' component={Register}></Route> */}
                 <Footer />                 
               </div>

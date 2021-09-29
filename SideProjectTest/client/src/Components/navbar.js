@@ -59,10 +59,13 @@ render() {
         <li className="nav-item">
           <a className="nav-link" href="/Delete">Delete</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/changePass">Change Password</a>
+        </li>
         {/* This is specifically used to enable a the capability of creating an account.  */}
         {/* <li class="nav-item">
           <a class="nav-link" href="/createAccount">Create Account</a>
-        </li>  */}
+        </li>   */}
         <li className="nav-item"> 
           <button className="logoutButton" onClick={this.clearCache}>Logout</button>
         </li>

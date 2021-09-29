@@ -26,7 +26,8 @@ router.get('/', (req, res) => {
         });
 });
 
-//.post is used to post the payload to the MongoDB 
+//.post is used to post the payload to the MongoDB
+// The second argument ***auth*** is used to run middleware:
 router.post('/save', auth, (req, res) => {
     const data = req.body;
     // Reordering the data into payload: 
@@ -235,7 +236,7 @@ router.post('/Auth', (req, res) => {
                                  email: user.email
                              }
                          });
-                         console.log("Token in api: " + token); 
+                        
                          
                         }
                      )
@@ -243,6 +244,64 @@ router.post('/Auth', (req, res) => {
 
         })
     
+});
+
+router.put('/update-auth', (req, res) => { 
+    const { email, password } = req.body; 
+    var newPass = req.body.password;
+    const filter = {email: email}; 
+    
+
+    // Simple validation
+    if (!email || !password) { 
+        return res.status(400).json({ msg: 'Please enter all fields' });
+    }
+
+    // Check for existing user: 
+    users.findOne({ email }) // We are looking for an email that equals the email, since they are the same we only need one
+        .then(user => { 
+            console.log("Here is the user: " + user); 
+            if (!user) return res.status(400).json({ msg: 'User does not exist'});
+        });
+
+            bcrypt.genSalt(10, (err, salt) => { 
+                bcrypt.hash(newPass, salt, (err, hash) => { 
+                   if (err) throw err;
+                    
+                    // Updating the new password with the hashed version:
+                    newPass = hash; 
+                    const update = newPass;
+                    users.updateOne(filter, {$set: {password: update }})
+                    .then((data) => {
+                        // We need to re-issue a token to the user:
+                        users.findOne({ email })
+                        .then(user => {
+                            if (!user) return res.status(400).json({ msg: 'User does not exist'});
+                            jwt.sign(
+                                { id: user.id }, 
+                                config.get('jwtSecret'), 
+                                { expiresIn: 3600 }, 
+                                (err, token) => { 
+                                    if (err) throw err; 
+                                    res.json({
+                                    token,
+                                    user: { 
+                                        id: user.id, 
+                                        name: user.name, 
+                                        email: user.email
+                                    }
+                                    });
+                                }
+                            )
+                        })
+                        // res.json(data);
+                    })
+                    .catch((error) => {
+                        return res.status(500).json({ msg: 'Could not update, need a valid account!'})
+                    });
+                });
+            });
+            
 });
 
 // This route is used to get a single users information exluding the password: 
